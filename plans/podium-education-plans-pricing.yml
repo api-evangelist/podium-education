@@ -1,0 +1,21 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.podiumeducation.com/global-career-accelerator
+note: >-
+  Podium Education publishes no pricing page and no plans of any kind. /pricing returned 404 on
+  www.podiumeducation.com and no pricing link appears in the site navigation, which offers
+  "Get Started" (https://www.podiumeducation.com/contact) instead. The commercial motion is a
+  university partnership: institutions contract with Podium to offer The Global Career Accelerator
+  for credit, and students pay their own institution's tuition (the program is described as
+  federal financial aid and Pell Grant eligible). There is no API, so there are no API plans, quotas
+  or overages to record. plan_count is an honest zero, not a missing measurement.
+pricing_url: null
+plan_count: 0
+plans: []
+evidence:
+- url: https://www.podiumeducation.com/pricing
+  status: 404
+- url: https://www.podiumeducation.com/global-career-accelerator
+  status: 200
+- url: https://www.podiumeducation.com/contact
+  status: 200

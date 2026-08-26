@@ -1,17 +1,31 @@
 aid: podium-education
 name: Podium Education
-description: 'Podium Education is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Podium Education is an Austin, Texas experiential-learning and career platform founded in 2018
+  that partners with colleges, universities and employers to close the college-to-career gap. Its
+  flagship program, The Global Career Accelerator, is a credit-bearing, financial-aid and
+  Pell-eligible online field experience in which undergraduates work on real brand projects in data
+  analytics, web development, digital marketing and tech operations alongside peers in other
+  countries, earning certificates and minors through their own institution. Podium delivers the
+  program on its own platform stack — a hosted Canvas LMS estate and a student application at
+  globalcareeraccelerator.org — sold to universities as a partnership rather than as software, and
+  it publishes no public developer program, API reference or machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/podium-education/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+image: https://cdn.prod.website-files.com/628e8d0a56d5555b8d2ca0b3/6298fbe54a0af2001fad3612_podium-thumb.png
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Education
+- Higher Education
+- EdTech
+- Online Learning
+- Workforce Development
+- Career Services
+- Learning Management
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +34,59 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/podium-education_stock/
+  url: https://www.podiumeducation.com/
+- type: About
+  url: https://www.podiumeducation.com/about
+- type: Blog
+  url: https://www.podiumeducation.com/blog
+- type: Support
+  url: https://www.podiumeducation.com/contact
+- type: TermsOfService
+  url: https://www.podiumeducation.com/tos
+- type: PrivacyPolicy
+  url: https://www.podiumeducation.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/Podium-Education
+- type: SignUp
+  url: https://globalcareeraccelerator.org/app/signup
+- type: Login
+  url: https://globalcareeraccelerator.org/app/login
+- type: LinkedIn
+  url: https://www.linkedin.com/company/podiumeducation
+- type: LLMsTxt
+  url: llms/podium-education-llms.txt
+- type: ContentSignal
+  url: conformance/podium-education-conformance.yml
+- type: Conformance
+  url: conformance/podium-education-conformance.yml
+- type: DomainSecurity
+  url: security/podium-education-domain-security.yml
+- type: Plans
+  url: plans/podium-education-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/podium-education-rate-limits.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Podium Education sells a university partnership, not software - The Global Career Accelerator is
+    delivered on a hosted Canvas LMS estate under podedtech.com whose only public doors are the
+    student login at globalcareeraccelerator.org/app/login and an admin sign-in at
+    cms.prod.podedtech.com, and the corporate site has no developer, API or docs section at all.
+  evidence:
+  - url: https://www.podiumeducation.com/developers
+    status: 404
+  - url: https://www.podiumeducation.com/openapi.json
+    status: 404
+  - url: https://globalcareeraccelerator.org/.well-known/agent-card.json
+    status: 404
+  - url: https://cms.prod.podedtech.com/openapi.json
+    status: 302
+  - url: https://hq.podedtech.com/
+    status: 302
+  checked: '2026-08-26'

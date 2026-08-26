@@ -1,0 +1,60 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct HTTP probes of /.well-known/* on every Podium Education host discoverable without
+  credentials: the corporate site (www.podiumeducation.com) and the Global Career Accelerator
+  program site (globalcareeraccelerator.org). Podium publishes no API host, so there is no
+  additional base-URL host to probe.
+note: >-
+  Every probed path returned 404. www.podiumeducation.com is a Webflow site whose
+  /.well-known/* handler answers with a fixed "Invalid .well-known request" HTML body under a 404
+  status; globalcareeraccelerator.org is a Duda site (canonical host marketing.podedtech.com) whose
+  404s return the site shell. No document was served, so NO WellKnown or SecurityTxt pointer is
+  emitted in apis.yml - this file records a verified absence, not a presence.
+hosts:
+- host: www.podiumeducation.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: globalcareeraccelerator.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

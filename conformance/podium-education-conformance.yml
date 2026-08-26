@@ -1,0 +1,96 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  https://globalcareeraccelerator.org/robots.txt, https://www.podiumeducation.com/robots.txt and a
+  full STEP 0b contract-discovery sweep (OpenAPI/Swagger, GraphQL introspection, MCP tools/list,
+  A2A agent card) across www.podiumeducation.com, globalcareeraccelerator.org,
+  cms.prod.podedtech.com and hq.podedtech.com.
+note: >-
+  Podium Education publishes no machine-readable API contract, so every cross-cutting API standard
+  below is asserted false on the evidence of absence rather than on a failed conformance test. The
+  one positive result is a Content-Signal declaration served in the Global Career Accelerator
+  robots.txt, which is a real, probed AI-preference signal.
+standards:
+- id: content-signal
+  name: Content Signals (robots.txt AI-preference declaration)
+  conforms: true
+  evidence: >-
+    https://globalcareeraccelerator.org/robots.txt (HTTP 200) serves
+    "Content-Signal: search=yes, ai-input=yes, ai-train=yes" alongside
+    "Sitemap: https://marketing.podedtech.com/sitemap.xml". Podium explicitly permits search
+    indexing, AI input and AI training on the Global Career Accelerator marketing surface.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: >-
+    /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs and /redoc all
+    returned 404 on www.podiumeducation.com; /openapi.json and /swagger.json returned 404 on
+    globalcareeraccelerator.org; every path on cms.prod.podedtech.com 302s to /admin/signin.
+- id: graphql
+  name: GraphQL
+  conforms: false
+  evidence: >-
+    https://www.podiumeducation.com/graphql returned 404;
+    https://cms.prod.podedtech.com/graphql returned 302 to an admin sign-in.
+- id: mcp
+  name: Model Context Protocol
+  conforms: false
+  evidence: No hosted MCP endpoint is advertised on any Podium Education or podedtech.com host.
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and /.well-known/agent.json returned 404 on both
+    www.podiumeducation.com and globalcareeraccelerator.org.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    /.well-known/oauth-authorization-server returned 404 on every probed host; no OAuth
+    documentation is published.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 404 on every probed host.
+- id: rfc9457
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: No public error reference or contract exists to declare an error media type.
+domain_standards:
+  market: Higher education / learning technology
+  shortlist:
+  - 1EdTech LTI (Learning Tools Interoperability)
+  - 1EdTech OneRoster
+  - 1EdTech Caliper Analytics
+  - 1EdTech QTI
+  - Ed-Fi
+  - Open Badges / Comprehensive Learner Record
+  findings:
+  - id: lti
+    name: 1EdTech LTI
+    conforms: false
+    evidence: >-
+      Podium runs a hosted Canvas LMS estate (github.com/Podium-Education holds a single public
+      repository, a fork of instructure/canvas-lms last pushed 2026-05-18, and *.lab.podedtech.com
+      certificates name per-institution Canvas instances). Canvas is an LTI platform, but Podium
+      publishes no LTI tool registration, no launch URL, no JWKS and no developer key documentation
+      of its own, so no LTI conformance can be asserted on Podium's behalf.
+  - id: oneroster
+    name: 1EdTech OneRoster
+    conforms: false
+    evidence: No published roster endpoint, spec, or integration documentation.
+  - id: caliper
+    name: 1EdTech Caliper Analytics
+    conforms: false
+    evidence: No published event/analytics contract.
+  - id: open-badges
+    name: Open Badges
+    conforms: false
+    evidence: >-
+      Certificate transparency shows badges-dev.podedtech.com, indicating an internal badging
+      service, but no production badging host resolves and no Open Badges assertion endpoint or
+      issuer profile is published. Recorded as a lead, not as conformance.
+  note: >-
+    Reward-only dimension. Podium's market does have standards (the 1EdTech family, Ed-Fi, Open
+    Badges) but Podium sells a university partnership rather than an integration product, and
+    declares none of them in a machine-readable form. Nothing is invented to fill the slot.

@@ -1,0 +1,19 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.podiumeducation.com/
+note: >-
+  Podium Education publishes no API and therefore no rate limits, no rate-limit response headers and
+  no documented exhaustion status code. A full STEP 0b contract-discovery sweep (OpenAPI/Swagger at
+  the site and API-host roots, GraphQL introspection, MCP tools/list, A2A agent card) returned 404
+  or an authentication redirect on every host. limit_count is an honest zero: nothing was found
+  because nothing is published, not because the docs were not read.
+limit_count: 0
+rate_limits: []
+headers: []
+evidence:
+- url: https://www.podiumeducation.com/developers
+  status: 404
+- url: https://www.podiumeducation.com/api
+  status: 404
+- url: https://www.podiumeducation.com/docs
+  status: 404
