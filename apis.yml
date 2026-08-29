@@ -13,6 +13,17 @@ description: >-
 url: https://raw.githubusercontent.com/api-evangelist/podium-education/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/628e8d0a56d5555b8d2ca0b3/6298fbe54a0af2001fad3612_podium-thumb.png
 specificationVersion: '0.20'
 created: '2026-08-26'
